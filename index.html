@@ -71,7 +71,7 @@
         <h2>Solicita tu Consulta</h2>
         <p>Ofrecemos rutinas digitales para fitness, musculación, pérdida de peso o deportes específicos. Incluye detalles sobre tus objetivos, nivel de experiencia y restricciones (ej. lesiones).</p>
         
-        <form action="#" method="post" id="consultaForm">
+        <form action="https://formspree.io/f/xblnajbk" method="POST" id="consultaForm">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             
@@ -112,9 +112,11 @@
     
     <script>
         document.getElementById('consultaForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('¡Consulta enviada! Te contactaremos pronto.');
-            // Aquí puedes integrar un servicio como EmailJS para enviar emails reales.
+            // No prevenir el envío, ya que Formspree lo maneja
+            // Opcional: Agregar confirmación
+            setTimeout(() => {
+                alert('¡Consulta enviada! Revisa tu Gmail para responder.');
+            }, 1000);
         });
     </script>
 </body>
